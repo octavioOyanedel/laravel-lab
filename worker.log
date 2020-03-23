@@ -1,0 +1,46 @@
+
+      [2m+19 vendor frames [22m
+  20  /home/vagrant/code/laravel_lab/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+      [2m+19 vendor frames [22m
+  20  /home/vagrant/code/laravel_lab/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+      [2m+19 vendor frames [22m
+  20  /home/vagrant/code/laravel_lab/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+      [2m+19 vendor frames [22m
+  20  /home/vagrant/code/laravel_lab/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+      [2m+19 vendor frames [22m
+  20  /home/vagrant/code/laravel_lab/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+      [2m+19 vendor frames [22m
+  20  /home/vagrant/code/laravel_lab/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+      [2m+19 vendor frames [22m
+  20  /home/vagrant/code/laravel_lab/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+      [2m+19 vendor frames [22m
+  20  /home/vagrant/code/laravel_lab/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+[2020-03-19 22:13:39][4] Processing: App\Mail\TestingMail
+[2020-03-19 22:13:40][5] Processing: App\Mail\TestingMail
+[2020-03-19 22:13:49][5] Processed:  App\Mail\TestingMail
+[2020-03-19 22:13:49][4] Processed:  App\Mail\TestingMail
+[2020-03-19 23:35:59][6] Processing: App\Mail\TestingMail
+[2020-03-19 23:36:06][6] Processed:  App\Mail\TestingMail
+[2020-03-20 02:06:03][7] Processing: App\Mail\TestingMail
+[2020-03-20 02:06:12][7] Processed:  App\Mail\TestingMail
+[2020-03-21 02:01:38][1] Processing: App\Mail\TestingMail
+[2020-03-21 02:01:48][1] Processed:  App\Mail\TestingMail
+[2020-03-21 02:05:39][1] Processing: App\Mail\TestingMail
+[2020-03-21 02:05:42][1] Processed:  App\Mail\TestingMail
+[2020-03-22 02:22:20][1] Processing: App\Mail\TestingMail
+[2020-03-22 02:22:33][1] Processed:  App\Mail\TestingMail

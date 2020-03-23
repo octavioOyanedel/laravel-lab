@@ -1,0 +1,46 @@
+.btn.btn-sm {
+    margin: 0;
+}
+
+.div-scroll-x {
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.contenedor-tablas {
+    margin: 0px 20px;
+}
+
+/*
+    Cambio fuente y tamaño de fuente tabla
+
+#miTabla th, 
+div#miTabla_info.dataTables_info,
+div#miTabla_paginate.dataTables_paginate.paging_simple_numbers,
+a.paginate_button.current,
+.dataTables_filter label,
+.dataTables_length label {
+    font-size: 14px !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+*/
+
+div#miTabla_wrapper.dataTables_wrapper.no-footer {
+    padding: 0px 20px;
+}
+
+ul.pagination {
+    justify-content: center !important;
+}
+
+table thead th td,
+table tbody tr td {
+    white-space: nowrap;
+}
+
+select.custom-select.custom-select-sm.selects-filtro {
+    float: right;
+    width: 100px !important;
+}
