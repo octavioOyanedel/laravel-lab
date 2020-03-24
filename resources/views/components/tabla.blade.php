@@ -2,7 +2,7 @@
 <form method="GET" action="{{ route('home') }}">
     <div class="form-row mb-4">
         <div class="col">
-            <select class="custom-select custom-select-sm selects-filtro" name="cantidad">
+            <select id="cantidad" class="custom-select custom-select-sm selects-filtro" name="cantidad">
                 <option selected>Cantidad</option>
                 <option value="10">10</option>
                 <option value="20">20</option>
@@ -11,15 +11,15 @@
               </select>
         </div>
         <div class="col">
-            <select class="custom-select custom-select-sm selects-filtro" name="campo">
-                <option selected>Campo</option>
+            <select id="columna" class="custom-select custom-select-sm selects-filtro" name="columna">
+                <option selected>Columna</option>
                     @foreach($cabeceras as $nombre => $valor)
                         <option value="{{ $valor }}">{{ $nombre }}</option>  
                     @endforeach    
               </select>
         </div>
         <div class="col">
-            <select class="custom-select custom-select-sm selects-filtro" name="orden">
+            <select id="orden" class="custom-select custom-select-sm selects-filtro" name="orden">
                 <option selected>Orden</option>
                 <option value="ASC">Ascendente</option>
                 <option value="DESC">Descendente</option>
@@ -29,7 +29,9 @@
             <!-- Last name -->
             <button type="submit" class="btn btn-sm btn-primary">Filtrar</button>
         </div>       
-    </div>    
+    </div>
+    <input class="form-control" type="hidden" name="campo" value="{{ Request()->campo }}">    
+    <input class="form-control" type="hidden" name="page" value="{{ Request()->page }}">    
 </form> 
 
 

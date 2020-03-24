@@ -16,7 +16,17 @@
                             </button>
                         </div>
                     @endif
+                                   
+                <nav class="navbar navbar-dark default-color">
+                    <form class="form-inline my-2 my-lg-0 ml-auto" method="GET" action="{{ route('home') }}">
 
+                        <input class="form-control" type="search" name="campo">
+
+                        <input class="form-control" type="hidden" name="page" value="{{ Request()->page }}">
+
+                        <button id="buscar" class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" type="submit">Buscar</button>
+                    </form>
+                </nav>
                 
                 <div class="table-responsive p-3">
 

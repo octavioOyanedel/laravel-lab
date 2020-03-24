@@ -15,6 +15,7 @@ class ClaseTeniente extends Model
         'teniente_id','clase_id',
     ];
 
+
     /**
      * Relaciones desde modelo Teniente hasta modelo Clase
      */

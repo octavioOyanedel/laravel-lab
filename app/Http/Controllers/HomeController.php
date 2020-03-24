@@ -25,15 +25,23 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        //$coleccion = Teniente::orderBy('nombre','ASC')->paginate(10);        
-        //$cabeceras = obtenerCabecerasTablas('tenientes');
-        //$ruta_include_tabla = 'includes.tablas.tenientes';
-
-        //dd($request);
-
-        $coleccion = Clase::orderBy('nombre','ASC')->paginate(10);
         $cabeceras = obtenerCabecerasTablas('clases');
         $ruta_include_tabla = 'includes.tablas.clases';
+
+        $cantidad = obtenerCantidad($request);
+        $columna = obtenerColumna($request);
+        $orden = obtenerOrden($request);
+        $campo = obtenerCampo($request);
+
+        $coleccion = Clase::orderBy($columna, $orden)
+        ->nombre($campo)
+        ->rango($campo)
+        ->paginate($cantidad)->appends([
+            'campo' => $campo,
+            'cantidad' => $cantidad,
+            'columna' => $columna,
+            'orden' => $orden,
+        ]);
 
         return view('home', compact('coleccion', 'cabeceras', 'ruta_include_tabla'));
     }

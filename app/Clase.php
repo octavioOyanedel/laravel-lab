@@ -16,6 +16,24 @@ class Clase extends Model
     ];
 
     /**
+     * scope modelo clase
+     */
+
+    public function scopeNombre($query, $campo)
+    {
+        if($campo != null){
+            return $query->orWhere('nombre', 'LIKE', "%$campo%");
+        }
+    }
+
+    public function scopeRango($query, $campo)
+    {
+        if($campo != null){
+            return $query->orWhere('rango', 'LIKE', "%$campo%");
+        }
+    }    
+
+    /**
      * los clases que pertenecen a el teniente.
      */
     public function clasesTeniente()
