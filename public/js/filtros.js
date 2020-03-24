@@ -1,34 +1,33 @@
 $(window).on('load',function(){
 
-    $.urlParam = function(name){
-        var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
-        return results[1] || 0;
-    }
-
-
-    if(decodeURIComponent($.urlParam('cantidad')) != null && decodeURIComponent($.urlParam('cantidad')) != ''){
+    if(obtenerValorDesdeURL('cantidad') != null){
         $('#cantidad option:selected').removeAttr('selected');
-        $('#cantidad option[value="'+decodeURIComponent($.urlParam('cantidad'))+'"]').attr("selected","selected");
+        $('#cantidad option[value="'+obtenerValorDesdeURL('cantidad')+'"]').attr("selected","selected");
     }
 
-    if(decodeURIComponent($.urlParam('columna')) != ''){
+    if(obtenerValorDesdeURL('columna') != null){
         $('#columna option:selected').removeAttr('selected');
-        $('#columna option[value="'+decodeURIComponent($.urlParam('columna'))+'"]').attr("selected","selected");
+        $('#columna option[value="'+obtenerValorDesdeURL('columna')+'"]').attr("selected","selected");
     }
 
-    if(decodeURIComponent($.urlParam('orden')) != ''){
+    if(obtenerValorDesdeURL('orden') != null){
         $('#orden option:selected').removeAttr('selected');
-        $('#orden option[value="'+decodeURIComponent($.urlParam('orden'))+'"]').attr("selected","selected");
-    }     
+        $('#orden option[value="'+obtenerValorDesdeURL('orden')+'"]').attr("selected","selected");
+    }
 
-    $('#buscar').click(function(){
-
-        $('#cantidad option:selected').removeAttr('selected');
-        $('#columna option:selected').removeAttr('selected');
-        $('#orden option:selected').removeAttr('selected');
-        $('#cantidad option[value=""]').attr("selected","selected");
-        $('#columna option[value=""]').attr("selected","selected");
-        $('#orden option[value=""]').attr("selected","selected");
-    });
-
+    function obtenerValorDesdeURL(parametro){
+        /**
+            0: "?cantidad=10"
+            1: "10"
+            index: 28
+            input: "http://laravel-lab.test/home?cantidad=10&columna=nombre&orden=ASC&campo=&page="
+            groups: undefined
+            length: 2
+        */
+        var results = new RegExp('[\?&]' +parametro+ '=([^&#]*)').exec(window.location.href);
+        if(results != null){
+            return results[1];
+        }
+        return null;
+    }
 });

@@ -27,9 +27,10 @@
         </div>  
         <div class="col">
             <!-- Last name -->
-            <button type="submit" class="btn btn-sm btn-primary">Filtrar</button>
+            <button id="filtro" type="submit" class="btn btn-sm btn-primary">Filtrar</button>
         </div>       
     </div>
+    
     <input class="form-control" type="hidden" name="campo" value="{{ Request()->campo }}">    
     <input class="form-control" type="hidden" name="page" value="{{ Request()->page }}">    
 </form> 
