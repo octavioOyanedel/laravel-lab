@@ -28,6 +28,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
 
     <link href="{{ asset('css/estilos.css') }}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
 
 
     <!-- Styles -->
@@ -98,9 +99,17 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
 
 <script src="{{ asset('js/filtros.js') }}" defer></script>
 <!-- JQuery -->
+<script>
+$(document).ready(function() {
+    $('.js-example-basic-single').select2();
+
+});
+
+</script>
 
 
 </html>

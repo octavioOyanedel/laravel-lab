@@ -56,4 +56,15 @@ class HomeController extends Controller
         $nombre = "Octavio Oyanedel";
         return view('componentes', compact('nombre'));
     }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function select2()
+    {
+        $coleccion = Clase::orderBy('nombre', 'ASC')->get();
+        return view('select2', compact('coleccion'));
+    }
 }
